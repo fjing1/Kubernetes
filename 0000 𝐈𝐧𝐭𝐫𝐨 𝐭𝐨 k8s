@@ -1,0 +1,49 @@
+𝐈𝐧𝐭𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧 𝐭𝐨 𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬: 𝐓𝐡𝐞 𝐅𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐂𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐎𝐫𝐜𝐡𝐞𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧
+
+𝐖𝐡𝐚𝐭 𝐢𝐬 𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬?
+Kubernetes, often abbreviated as K8s, was originally developed by Google and is now maintained by the Cloud Native Computing Foundation (CNCF). At its core, it’s a system designed to automate the deployment, scaling, and management of containerized applications.
+
+𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞:
+
+𝐌𝐚𝐬𝐭𝐞𝐫 𝐍𝐨𝐝𝐞: The command center of Kubernetes.
+𝐀𝐏𝐈 𝐒𝐞𝐫𝐯𝐞𝐫: Think of it as the front door to Kubernetes. It’s the main management interface.
+𝐂𝐨𝐧𝐭𝐫𝐨𝐥𝐥𝐞𝐫 𝐌𝐚𝐧𝐚𝐠𝐞𝐫: This ensures the desired state of the system matches the actual state.
+𝐒𝐜𝐡𝐞𝐝𝐮𝐥𝐞𝐫: This decides on which node an unscheduled pod will run.
+𝐞𝐭𝐜𝐝: A safe and reliable store for all cluster data.
+2. 𝐖𝐨𝐫𝐤𝐞𝐫 𝐍𝐨𝐝𝐞𝐬: These are the machines, VMs, or physical computers where the applications are run.
+
+𝐊𝐮𝐛𝐞𝐥𝐞𝐭: An agent that ensures the pods are running correctly.
+𝐊𝐮𝐛𝐞 𝐏𝐫𝐨𝐱𝐲: Takes care of individual host subnetting and ensures the services’ traffic is properly forwarded.
+𝐏𝐨𝐝𝐬: Smallest deployable units that can be created and managed in Kubernetes.
+
+
+𝐑𝐞𝐚𝐥-𝐥𝐢𝐟𝐞 𝐔𝐬𝐞 𝐂𝐚𝐬𝐞𝐬 𝐨𝐟 𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞:
+
+1.𝐌𝐞𝐝𝐢𝐚 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐬:
+	𝐒𝐜𝐞𝐧𝐚𝐫𝐢𝐨: A popular series gets released, causing a massive surge in viewership.
+	𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐌𝐚𝐠𝐢𝐜: Thanks to the Scheduler and Controller Manager, Kubernetes can auto-scale the infrastructure, ensuring smooth streaming even during peak demand.
+
+2. 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐆𝐢𝐚𝐧𝐭𝐬 𝐨𝐧 𝐒𝐚𝐥𝐞 𝐃𝐚𝐲𝐬
+
+	𝐒𝐜𝐞𝐧𝐚𝐫𝐢𝐨: Huge sales like Black Friday see a drastic increase in users and purchases.
+	𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐌𝐚𝐠𝐢𝐜: Worker nodes are efficiently managed to balance the load, and if any node goes down, the system self-heals by redistributing the load.
+
+3. 𝐓𝐫𝐚𝐯𝐞𝐥 𝐏𝐨𝐫𝐭𝐚𝐥𝐬 𝐃𝐮𝐫𝐢𝐧𝐠 𝐇𝐨𝐥𝐢𝐝𝐚𝐲 𝐒𝐞𝐚𝐬𝐨𝐧:
+
+	𝐒𝐜𝐞𝐧𝐚𝐫𝐢𝐨: A sudden surge in bookings during holiday season.
+	𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐌𝐚𝐠𝐢𝐜: Kubernetes ensures that the booking engine, inventory checks, and payment gateways are all functioning smoothly by effectively managing the pods across worker nodes.
+
+4. 𝐇𝐞𝐚𝐥𝐭𝐡𝐜𝐚𝐫𝐞 & 𝐓𝐞𝐥𝐞𝐦𝐞𝐝𝐢𝐜𝐢𝐧𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐬
+
+	𝐒𝐜𝐞𝐧𝐚𝐫𝐢𝐨: A platform needs to run critical health applications, manage patient data, and ensure zero downtime.
+	𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 𝐌𝐚𝐠𝐢𝐜: Using its robust architecture, Kubernetes provides high availability, ensuring that essential applications are always accessible, even if some nodes or containers fail.
+
+Wrapping Up:
+
+Kubernetes, with its well-thought-out architecture, is not just a trend but a revolution in application deployment and scaling. Businesses, big or small, are harnessing its capabilities to ensure seamless operations, even in the most demanding scenarios.
+
+“How has Kubernetes transformed your operations? Share your stories”
+
+1. Pepperdata capactory optmizeer and its gen2, dynamically allocate resource
+2. Mydeos, a cloud based game platform
+
