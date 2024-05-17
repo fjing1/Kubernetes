@@ -1,22 +1,28 @@
 A 𝐃𝐚𝐞𝐦𝐨𝐧𝐒𝐞𝐭 ensures that all (or some) nodes run a copy of a Pod. As nodes are added to the cluster, Pods are added to them. Conversely, as nodes are removed from the cluster, those Pods are garbage-collected. This makes sure that a specified Pod runs on every node or specific nodes, based on your criteria.
+
 Why is DaemonSet Significant?
-𝐍𝐨𝐝𝐞-𝐋𝐞𝐯𝐞𝐥 𝐎𝐩𝐞𝐫𝐚𝐭𝐢𝐨𝐧𝐬:
+
+**𝐍𝐨𝐝𝐞-𝐋𝐞𝐯𝐞𝐥* 𝐎𝐩𝐞𝐫𝐚𝐭𝐢𝐨𝐧𝐬:
 There are certain tasks in a cluster that are best managed on a node-by-node basis. DaemonSets are designed to support these types of operations.
+
 2. 𝐑𝐞𝐬𝐨𝐮𝐫𝐜𝐞 𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠 & 𝐋𝐨𝐠𝐠𝐢𝐧𝐠:
 
 For tools like node-level log aggregators, monitoring agents, or any other application that needs to maintain a presence on all nodes, DaemonSets are invaluable. For example, if you have a tool that collects system metrics like CPU or memory usage, you’d use a DaemonSet to ensure that it’s collecting data from every node.
+
 3. 𝐒𝐭𝐨𝐫𝐚𝐠𝐞 𝐚𝐧𝐝 𝐍𝐞𝐭𝐰𝐨𝐫𝐤𝐢𝐧𝐠:
 
 DaemonSets can be used to run storage daemon applications, which manage or interact with local storage, or networking applications that manage network configurations.
+
 4. 𝐇𝐚𝐫𝐝𝐰𝐚𝐫𝐞 & 𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞 𝐇𝐲𝐠𝐢𝐞𝐧𝐞:
 
 If you have specific drivers or software that need to be present on every node, a DaemonSet is an ideal choice to deploy and ensure the presence of that software.
+
 5. 𝐍𝐨𝐝𝐞 𝐒𝐞𝐥𝐞𝐜𝐭𝐢𝐨𝐧:
 
 Although the primary idea behind DaemonSets is to run a copy of the pod across all nodes, you can also specify node criteria. This means you can instruct the DaemonSet to only deploy the pod on nodes that meet certain conditions (e.g., nodes with a specific type of GPU).
 
 ### Practical Example:
-Imagine you have a cluster with nodes spread across multiple geographical regions. You want to deploy a monitoring tool that not only checks the health and performance of each node but also reports data specific to its geographical location. With DaemonSets, you can ensure:
+Imagine you have a cluster with nodes spread across multiple geographical regions. You want to deploy a monitoring tool that not only checks the health and performance of each **node** but also reports data specific to its geographical location. With DaemonSets, you can ensure:
 
 Each node in the cluster has a copy of this monitoring tool.
 As new nodes are added (perhaps in new geographical locations), they automatically get this monitoring tool.
