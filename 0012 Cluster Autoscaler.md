@@ -38,3 +38,6 @@ Imagine a financial institution that runs its core banking system on-premises (f
 During a big marketing campaign, there’s a surge in user sign-ups and activity on the customer-facing app. Cluster Autoscaler recognizes that the current on-premises nodes are insufficient to handle the load. Since the organization has a hybrid setup, Kubernetes, with Cluster Autoscaler, can seamlessly provision additional nodes in the public cloud to handle the spike. Post-campaign, as the demand normalizes, the additional nodes in the public cloud are de-provisioned to optimize costs.
 
 In essence, Cluster Autoscaler in a hybrid cloud setup ensures that organizations get the best of both worlds: the security and control of on-premises setups and the scalability and flexibility of the cloud.
+
+
+### what is this autoscaler different from the pod adjustor(hpa & vpa)?
